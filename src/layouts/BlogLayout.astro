@@ -13,12 +13,12 @@ import '../styles/blog.css';
 //     frontmatter?: string;
 // }
 
-const { title, ...rest } = Astro.props;
-
-const frontmatter = rest.frontmatter;
+//const { title, ...rest } = Astro.props;
+//const frontmatter = rest.frontmatter;
 //console.log(frontmatter.title);
 //console.log(...rest);
 
+const { title } = Astro.props;
 
 ---
 
@@ -31,7 +31,7 @@ const frontmatter = rest.frontmatter;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon-official.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title> { frontmatter.title } </title>
+		<title> { title  } </title>
         <ClientRouter />
 	</head>
 	
